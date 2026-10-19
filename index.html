@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Salão de Festas Mandinbra em Viana, Luanda — um espaço elegante para casamentos, festas e celebrações em família."
+    />
+    <title>Salão de Festas Mandinbra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="Ir para o início">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="brand-text">Mandinbra</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="#home">Início</a>
+          <a href="#space">O Espaço</a>
+          <a href="#gallery">Galeria</a>
+          <a href="#events">Eventos</a>
+          <a href="#reviews">Avaliações</a>
+          <a href="#contact">Contactos</a>
+        </nav>
+
+        <a class="btn btn-primary nav-cta" href="#contact">Solicitar Informações</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-image-wrap">
+          <img
+            src="./pasta do junior/optimized/Festa ao pôr do sol junto à piscina.jpg"
+            alt="Piscina e jardim do Mandinbra preparados para uma celebração ao pôr do sol"
+            width="1836"
+            height="857"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero-content container">
+          <div class="eyebrow">Celebrar com elegância</div>
+          <h1>Momentos especiais merecem um cenário inesquecível.</h1>
+          <p>
+            O Salão de Festas Mandinbra reúne atmosfera acolhedora, espaço versátil e
+            cuidado nos detalhes para festas, eventos familiares e celebrações especiais em
+            Viana, Luanda.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Solicitar Informações</a>
+            <a class="btn btn-secondary" href="#gallery">Ver Galeria</a>
+          </div>
+          <ul class="hero-highlights" aria-label="Destaques do salão">
+            <li>Ambientes sofisticados</li>
+            <li>Atmosfera acolhedora</li>
+            <li>Toque premium</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section intro" id="space">
+        <div class="container split-grid">
+          <div>
+            <p class="section-tag">O espaço</p>
+            <h2>Elegância, conforto e uma experiência de celebração cuidada.</h2>
+          </div>
+          <div>
+            <p>
+              Cada detalhe foi pensado para receber os convidados com calma, conforto e um
+              ambiente que combina beleza, funcionalidade e acolhimento. O espaço foi
+              desenhado para transformar eventos em memórias duradouras, com presença
+              natural, iluminação especial e uma criação que valoriza o momento.
+            </p>
+          </div>
+        </div>
+
+        <div class="container feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">01</div>
+            <h3>Ambientes versáteis</h3>
+            <p>
+              Um espaço que adapta a identidade de cada celebração, desde festas íntimas até
+              momentos de grande dimensão.
+            </p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">02</div>
+            <h3>Iluminação sofisticada</h3>
+            <p>
+              Texturas, luz e decoração em harmonia para criar uma atmosfera envolvente,
+              acolhedora e memorável.
+            </p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">03</div>
+            <h3>Atendimento atento</h3>
+            <p>
+              Organização cuidada, atendimento próximo e uma proposta pensada para facilitar a
+              experiência de cada anfitrião.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Galeria</p>
+            <h2>À descoberta do ambiente e da personalidade do espaço.</h2>
+          </div>
+          <div class="gallery-filters" aria-label="Filtrar fotografias da galeria">
+            <button class="gallery-filter is-active" type="button" data-filter="todas" aria-pressed="true">Todas</button>
+            <button class="gallery-filter" type="button" data-filter="exteriores" aria-pressed="false">Espaços exteriores</button>
+            <button class="gallery-filter" type="button" data-filter="piscina" aria-pressed="false">Piscina</button>
+            <button class="gallery-filter" type="button" data-filter="decoracao" aria-pressed="false">Decoração</button>
+            <button class="gallery-filter" type="button" data-filter="noturno" aria-pressed="false">Ambiente noturno</button>
+          </div>
+          <div class="gallery-grid" id="gallery-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <dialog class="gallery-dialog" id="gallery-dialog" aria-label="Fotografia ampliada">
+        <button class="gallery-dialog-close" type="button" aria-label="Fechar fotografia">Fechar</button>
+        <img class="gallery-dialog-image" alt="" />
+        <p class="gallery-dialog-caption"></p>
+      </dialog>
+
+      <section class="section events-section" id="events">
+        <div class="container">
+          <div class="section-heading narrow">
+            <p class="section-tag">Eventos</p>
+            <h2>Celebramos ocasiões que merecem presença e cuidado.</h2>
+          </div>
+
+          <div class="event-list">
+            <article class="event-item">
+              <div class="event-icon" aria-hidden="true">✦</div>
+              <div>
+                <h3>Casamentos</h3>
+                <p>
+                  Um ambiente elegante para receber familiares e amigos em um momento único,
+                  com atmosfera sofisticada e acolhimento genuíno.
+                </p>
+              </div>
+            </article>
+            <article class="event-item">
+              <div class="event-icon" aria-hidden="true">✦</div>
+              <div>
+                <h3>Aniversários</h3>
+                <p>
+                  Festas cheias de personalidade, com espaço, decoração e ritmo para tornar cada
+                  momento ainda mais especial.
+                </p>
+              </div>
+            </article>
+            <article class="event-item">
+              <div class="event-icon" aria-hidden="true">✦</div>
+              <div>
+                <h3>Eventos empresariais</h3>
+                <p>
+                  Reuniões, lançamentos e momentos institucionais com apresentação impecável e
+                  ambiente profissional e acolhedor.
+                </p>
+              </div>
+            </article>
+            <article class="event-item">
+              <div class="event-icon" aria-hidden="true">✦</div>
+              <div>
+                <h3>Comemorações em família</h3>
+                <p>
+                  Espaço confortável para celebrar datas importantes no meio da família, num
+                  ambiente que combina conforto e charme.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reviews-section" id="reviews">
+        <div class="container">
+          <div class="section-heading narrow">
+            <p class="section-tag">Avaliações</p>
+            <h2>O que dizem os nossos clientes</h2>
+            <p class="reviews-intro">
+              Descubra as experiências de quem já viveu momentos especiais na Mandinbra.
+            </p>
+          </div>
+
+          <div class="reviews-grid">
+            <blockquote class="review-card">
+              <p>
+                “Um espaço bonito, acolhedor e extremamente bem cuidado. A atmosfera transmite
+                conforto e elegância desde a chegada.”
+              </p>
+              <footer>
+                <strong>Maria S.</strong>
+                <span>Convidada</span>
+              </footer>
+            </blockquote>
+            <blockquote class="review-card">
+              <p>
+                “A organização foi impecável, o ambiente muito especial e o detalhe da
+                decoração conseguiu transformar o evento em algo memorável.”
+              </p>
+              <footer>
+                <strong>Rui M.</strong>
+                <span>Aniversário</span>
+              </footer>
+            </blockquote>
+            <blockquote class="review-card">
+              <p>
+                “Estávamos em busca de um espaço elegante para celebrar em família e o ambiente
+                do salão superou as expectativas.”
+              </p>
+              <footer>
+                <strong>Patrícia V.</strong>
+                <span>Evento familiar</span>
+              </footer>
+            </blockquote>
+            <blockquote class="review-card">
+              <p>
+                “Salão de festas bem localizado em Viana. É um bom lugar para se estar, cheio
+                de beleza, ar puro, uma piscina e muita zona verde. Um espaço incrível, vale a
+                pena visitar.”
+              </p>
+              <footer>
+                <strong>Julião Isabel</strong>
+              </footer>
+            </blockquote>
+            <blockquote class="review-card">
+              <p>
+                “Quem entra neste espaço nunca sai triste! Tem muitos espaços para sessões
+                fotográficas.”
+              </p>
+              <footer>
+                <strong>Julião Isabel</strong>
+              </footer>
+            </blockquote>
+            <blockquote class="review-card">
+              <p>“Lugar muito espaçoso e ótimo para eventos.”</p>
+              <footer>
+                <strong>Lindi Tulumba</strong>
+              </footer>
+            </blockquote>
+            <blockquote class="review-card">
+              <p>
+                “Esse salão é o máximo, super-recomendo! Casei-me neste salão e não me
+                arrependo. Desde o atendimento à realização do evento, passando pelo DJ, tudo
+                foi nota 10. Os donos são espetaculares. Até ganhei um quarto de oferta!”
+              </p>
+              <footer>
+                <strong>Eugenia Anacleta Manuel</strong>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+          <article class="contact-card">
+            <span class="contact-label">Redes sociais</span>
+            <h2>Acompanhe-nos nas redes sociais</h2>
+            <p>
+              Conheça melhor o nosso espaço e acompanhe as novidades da Mandinbra.
+            </p>
+            <div class="contact-actions">
+              <a
+                class="btn btn-secondary contact-action"
+                href="https://www.facebook.com/p/Mandimbra-Show-100075913905210/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="contact-icon contact-icon-facebook" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.3 1.6-4.3 4.5v2.1H7v3.2h2.9V21h3.6Z" />
+                </svg>
+                Visitar Facebook
+              </a>
+              <a
+                class="btn btn-secondary contact-action"
+                href="https://www.instagram.com/mandimbrashowoficial/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle class="contact-icon-dot" cx="17.7" cy="6.6" r="1" />
+                </svg>
+                Visitar Instagram
+              </a>
+            </div>
+          </article>
+
+          <article class="contact-card">
+            <span class="contact-label">Contacto telefónico</span>
+            <h2>Entre em contacto connosco</h2>
+            <p>
+              Tem alguma dúvida ou pretende obter mais informações sobre o nosso espaço para
+              eventos? Entre em contacto connosco através do nosso número de telefone. A nossa
+              equipa está disponível para o ajudar com as informações de que necessita.
+            </p>
+            <strong class="contact-phone">+244 990 323 238</strong>
+            <a class="btn btn-primary contact-action" href="tel:+244990323238">
+              Ligar agora
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <span class="contact-label">Localização</span>
+            <h2>Visite-nos</h2>
+            <p>
+              Quer conhecer o nosso espaço pessoalmente? Consulte a nossa localização no Google
+              Maps e obtenha indicações para chegar ao Salão de Festas Mandinbra.
+            </p>
+            <address class="contact-address">
+              <strong>Salão de Festas Mandinbra</strong>
+              <span>4949+356, Unnamed Road, Luanda, Angola</span>
+            </address>
+            <a
+              class="btn btn-primary contact-action"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Sal%C3%A3o%20de%20Festas%20Mandinbra%2C%204949%2B356%2C%20Unnamed%20Road%2C%20Luanda%2C%20Angola"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M19 10.2c0 5-7 11-7 11s-7-6-7-11a7 7 0 1 1 14 0Z" />
+                <circle cx="12" cy="10" r="2.3" />
+              </svg>
+              Ver localização no Google Maps
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <p class="footer-brand">Salão de Festas Mandinbra</p>
+          <p>Celebrar com estilo, conforto e memória.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Navegação do rodapé">
+          <a href="#home">Início</a>
+          <a href="#space">O Espaço</a>
+          <a href="#gallery">Galeria</a>
+          <a href="#contact">Contactos</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/data/gallery.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
