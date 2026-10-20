@@ -16,7 +16,6 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: clamp(20px, calc(19px + 0.2vw), 22px);
 }
 
 body {
@@ -24,6 +23,7 @@ body {
   font-family: "Inter", sans-serif;
   background: var(--ivory);
   color: var(--charcoal);
+  font-size: clamp(1rem, 0.98rem + 0.12vw, 1.0625rem);
   line-height: 1.6;
 }
 
@@ -61,8 +61,8 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  min-height: 82px;
+  gap: 1rem;
+  min-height: 72px;
 }
 
 .brand {
@@ -115,9 +115,9 @@ textarea {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.25rem;
   color: var(--charcoal);
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .site-nav a {
@@ -148,7 +148,8 @@ textarea {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 0.9rem 1.4rem;
+  min-height: 46px;
+  padding: 0.7rem 1.2rem;
   font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
@@ -168,6 +169,24 @@ textarea {
   border: 1px solid rgba(32, 33, 31, 0.2);
   background: rgba(255, 255, 255, 0.1);
   color: var(--charcoal);
+}
+
+.hero .btn-secondary {
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--forest);
+  box-shadow: 0 8px 20px rgba(15, 21, 19, 0.14);
+}
+
+.hero .btn-secondary:hover,
+.hero .btn-secondary:focus-visible {
+  background: var(--forest);
+  color: var(--white);
+}
+
+.hero .btn:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 3px;
 }
 
 .nav-toggle {
@@ -192,7 +211,7 @@ textarea {
 
 .hero {
   position: relative;
-  min-height: clamp(620px, 62vw, 760px);
+  min-height: clamp(560px, 55vw, 720px);
   display: flex;
   align-items: center;
   background: var(--forest);
@@ -220,8 +239,8 @@ textarea {
 .hero-content {
   position: relative;
   z-index: 1;
-  width: min(700px, 100%);
-  padding: 5rem 0 4rem;
+  width: min(840px, 100%);
+  padding: 4rem 0 3rem;
   color: var(--white);
 }
 
@@ -247,13 +266,13 @@ textarea {
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 6vw, 6rem);
-  max-width: 620px;
+  font-size: clamp(2.75rem, 3.7vw, 4rem);
+  max-width: 840px;
 }
 
 .hero p {
   max-width: 560px;
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.85);
 }
 
@@ -282,7 +301,7 @@ textarea {
 }
 
 .section {
-  padding: 7rem 0;
+  padding: clamp(3.75rem, 5vw, 5rem) 0;
 }
 
 .split-grid {
@@ -295,7 +314,7 @@ textarea {
 .split-grid h2,
 .section-heading h2,
 .contact-section h2 {
-  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  font-size: clamp(1.9rem, 2.6vw, 2.6rem);
   color: var(--forest);
 }
 
@@ -770,7 +789,7 @@ textarea {
 
   .site-nav {
     gap: 0.7rem;
-    font-size: 0.9rem;
+    font-size: 0.9375rem;
   }
 
   .nav-cta {
@@ -853,17 +872,17 @@ textarea {
 
   .hero-content {
     width: min(760px, calc(100% - 2rem));
-    padding: clamp(2.5rem, 5vw, 4rem) 0;
+    padding: clamp(2rem, 4vw, 3rem) 0;
   }
 }
 
 @media (max-width: 640px) {
   .hero-content {
-    padding: 2.5rem 0 3rem;
+    padding: 2rem 0 2.5rem;
   }
 
   .hero h1 {
-    font-size: clamp(2.25rem, 8vw, 3rem);
+    font-size: clamp(2rem, 7vw, 2.75rem);
   }
 
   .gallery-filter {
